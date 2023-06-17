@@ -160,10 +160,11 @@ section:target{
     padding: 20px 10px 10px;
     margin: 10px auto;
     font-weight: 400;
+    font-size: 50px;
 }
 
 .Section-Heading span{
-    font-size: 40px;
+    font-size: 50px;
     color: #2857a4;
     display: inline-block;
     padding-top: 10px;
@@ -190,7 +191,7 @@ section:target{
 }
 
 .Skill-Progress{
-    margin-top: 50px;
+    margin: 20px;
     border: black;
     background-color: darkgray;
     border-radius: 20px 20px 20px 20px;
@@ -264,6 +265,7 @@ section:target{
 
 #Contact-body{
     font-size: 50px;
+    margin-bottom: 20px;
 }
 
 #Contact{
@@ -273,8 +275,8 @@ section:target{
 }
 
 #Contact-Me{
-    padding-top: 20px;
-    padding-left: 10%;
+    padding-top: 45px;
+    padding-left: 8%;
     width: 50%;
 }
 
@@ -341,15 +343,40 @@ section:target{
 
 #LastSoc{
     margin-top: 50px;
-    width:22%;
+    width: 300px;
     height:50px;
     background-color: white;
     align-items: center;
     border-radius: 10px 10px 10px 10px;
     padding-top: 5px;
     padding-bottom: 10px;
+    position: relative;
 }
 
+/* Adding Icon Pop On Hovering Feature*/
+#LastSoc ul li:hover img{
+    transform: scale(1.2);
+}
 
+/* Experience Section */
+/* Timeline */
+.timeline{
+    position: relative;
+    width: 75%;
+    border: 2px solid black;
+}
+
+.timeline-box{
+    position: relative;
+    width: 40%;
+    left: 5%;
+    border: 2px solid black;
+    min-height: 150px;
+    margin: 5px 5px 5px 5px;
+}
+
+.timeline-box:nth-child(2n){
+    left:53%;
+}
 
 
