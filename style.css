@@ -416,6 +416,7 @@ section:target{
     z-index: 1;
 }
 
+
 .TimeLine-divider{
     width:0%;
     height:65%;
@@ -423,6 +424,21 @@ section:target{
     border: 3px dashed grey;
     top: 10%;
     left: 50%;
+}
+
+@media screen and (max-width: 600px){
+    .TimeLine-divider{
+        left: 5%;
+    }
+
+    .TimeLine-content{
+        left: 12% !important;
+        width: 80%;
+    }
+
+    .TimeLine-content:after{
+        left: -12% !important;
+    }
 }
 
 .obj{
