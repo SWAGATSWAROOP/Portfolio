@@ -187,6 +187,7 @@ section:target{
     flex-direction: row;
     justify-content: center;
     gap: 30px;
+    margin : 0px 10px 0px 10px;
 }
 
 /* For Direct Child */
