@@ -124,8 +124,8 @@ section:target{
 }
 
 #my-image{
-    height: 12rem;
-    width: 12rem;
+    height: 13rem;
+    width: 16rem;
     margin: auto;
     margin-top: -10vh; 
 }
@@ -387,6 +387,19 @@ section:target{
     width: 45%;
     margin: 5px;
     position: relative;
+}
+
+.TimeLine-content h3{
+    font-size: 35px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.TimeLine-content p{
+    font-size: 25px;
+    text-align: left;
+    color: black;
+    margin-left: 10px;
 }
 
 .TimeLine-content:nth-child(2n){
