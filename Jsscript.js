@@ -56,7 +56,7 @@
 
 function scrollVertically(p){
     let target = document.getElementById(p).getBoundingClientRect().top;
-        if(target <= 0){
+        if(target <= 0 || window.innerHeight + window.scrollY >= document.body.offsetHeight){
         clearInterval(scroll);
         return;
     }
