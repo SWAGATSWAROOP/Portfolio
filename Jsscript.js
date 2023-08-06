@@ -16,7 +16,7 @@ var a = document.getElementsByClassName('nav-menu')[0];
                             return;
                         }
                         currentPosition += 50;
-                        window.scrollTo(0, currentPosition);
+                        window.scrollBy(0,50);
                     }, 20);
                 });
             });
