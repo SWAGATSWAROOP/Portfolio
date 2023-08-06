@@ -25,22 +25,53 @@
 //         }
 
 //Own my Own
-var anchorTags = document.querySelectorAll('.nav-menu a');
+//Approach 1:-
+// var anchorTags = document.querySelectorAll('.nav-menu a');
 
+// for(let i of anchorTags){
+//     i.addEventListener('click',function(event){
+//         event.preventDefault();
+//         let p = this.textContent.trim().toLowerCase();
+//         let scroll = setInterval(function(){
+//             let target = document.getElementById(p).getBoundingClientRect().top;
+//             if(target <= 0){
+//                 clearInterval(scroll);
+//                 return;
+//             }
+//             window.scrollBy(0,50);
+//         },20);
+//     });
+// }
+
+//Approach2:-
+// var anchorTags = document.querySelectorAll('.nav-menu a');
+// var scroll;
+// for(let i of anchorTags){
+//     i.addEventListener('click',function(event){
+//         event.preventDefault();
+//         let p = this.textContent.trim().toLowerCase();
+//         scroll = setInterval(scrollVertically,20,p);
+//     });
+// }
+
+function scrollVertically(p){
+    let target = document.getElementById(p).getBoundingClientRect().top;
+        if(target <= 0){
+        clearInterval(scroll);
+        return;
+    }
+    window.scrollBy(0,50);
+}
+
+//Approach 3
+var anchorTags = document.querySelectorAll('.nav-menu a');
+var scroll;
 for(let i of anchorTags){
     i.addEventListener('click',function(event){
         event.preventDefault();
         let p = this.textContent.trim().toLowerCase();
-        let scroll = setInterval(function(){
-            let target = document.getElementById(p).getBoundingClientRect().top;
-            if(target <= 0){
-                clearInterval(scroll);
-                return;
-            }
-            window.scrollBy(0,50);
+        scroll = setInterval(function(){
+            scrollVertically(p);
         },20);
     });
 }
-
-
-
