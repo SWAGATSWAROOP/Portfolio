@@ -54,6 +54,8 @@
 //     });
 // }
 
+
+//Smooth Scroll Implementation
 function scrollVertically(p){
     let target = document.getElementById(p).getBoundingClientRect().top;
         if(target <= 0 || window.innerHeight + window.scrollY >= document.body.offsetHeight){
@@ -75,3 +77,51 @@ for(let i of anchorTags){
         },20);
     });
 }
+
+//Skill Bar Section
+var skill = document.querySelectorAll('.Skill-Progress > div');
+var skillsection = document.getElementById('skills');
+window.addEventListener('scroll',fillbar);
+
+function initialbar(){
+    for(let bar of skill){
+        bar.style.width = 0 + '%';
+    }
+}
+
+var flag = false;
+initialbar();
+
+function fillbar(){
+    var check = skillsection.getBoundingClientRect();
+    if(!flag && window.innerHeight > check.top){
+        flag = true;
+        fill();
+    }
+    else if(check.bottom < 0 || check.top > window.innerHeight){
+        flag = false;
+        initialbar();
+    }
+}
+
+function fill(){
+    for(let bar of skill){
+        let currwidth = 0;
+        let targetwidth = bar.getAttribute('data-value');
+        let interval = setInterval(function(){
+            if(currwidth > targetwidth){
+                clearInterval(interval);
+                return;
+            }
+            currwidth++;
+            bar.style.width = currwidth + '%';
+        },10);
+    }
+}
+
+
+
+
+
+
+
